@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- formresult?myname=입력한이름&myage=입력나이 -->
+<!-- method default 는 get 임(post일 경우 별도로 지정) -->
+    <form action="/formresult" method="get" target="myi">
+        <label>이름:</label>
+        <input type="text" name="myname" required><br><br>
+        <label>나이:</label>
+        <input type="number" name="myage" min="0" max="100"><br><br>
+        <label>생일:</label>
+        <input type="date" name="mybirth" required><br><br>
+        <label>시간:</label>
+        <input type="time" name="mytime" required><br><br>
+        
+        <fieldset>
+            <legend >색상</legend>
+            <input type="radio" name="mycolor" value="빨강"><label>: 빨강</label><br>
+            <input type="radio" name="mycolor" value="초록"><label>: 초록</label><br>
+            <input type="radio" name="mycolor" value="파랑"><label>: 파랑</label><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend >취미</legend>
+            <input type="checkbox" name="myhobby" value="운동"><label>: 운동</label><br>
+            <input type="checkbox" name="myhobby" value="독서"><label>: 독서</label><br>
+            <input type="checkbox" name="myhobby" value="영화"><label>: 영화</label><br>
+        </fieldset>
+
+        <legend>회사</legend>
+        <select name="mycompany">
+            <option value="삼성">삼성</option>
+            <option value="SK">SK</option>
+            <option value="LG">LG</option>
+            <option value="현대">현대</option>
+        </select>
+        <br>
+        <label>포부</label><br>
+        <textarea cols="100" row=1 name="my_text" ></textarea><br>
+
+        <label>전화번호:</label><br>
+        <input type="tel"pattern="\d{2,3}-\d{3,4}-\d{3,4}" placeholder="000-0000-0000" name="mytel"><br><br>
+        
+        <label>E-mail:</label><br>
+        <input type="email" placeholder="*****@******.***" name="myemail"><br><br>
+        
+        <button>확인</button>
+    </form><br>
+
+    <label>RESULT</label><br>
+    <iframe name="myi" width="300" height="100" frameborder="1"></iframe>
+</body>
+</html>
