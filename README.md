@@ -1,1 +1,3 @@
-# flask_tutorial
+# 플라스크 활용 연습용 Repo
+
+## 플라스크를 활용하여 python 기반 웹 제작
